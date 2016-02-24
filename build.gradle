@@ -1,0 +1,30 @@
+group 'exampel'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'war'
+
+sourceCompatibility = 1.5
+ext.wicketVersion = "7.1.0"
+
+repositories {
+    mavenCentral()
+}
+
+sourceSets {
+    main {
+        java {
+            srcDir 'src/main/java'
+        }
+        resources {
+            srcDir 'src/main/resources'
+            srcDir 'src/main/java'
+        }
+    }
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile "org.apache.wicket:wicket-core:${wicketVersion}"
+    compile "org.apache.wicket:wicket-request:${wicketVersion}"
+}

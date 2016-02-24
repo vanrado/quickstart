@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:wicket="http://wicket.apache.org">
+<head>
+    <script src="//code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#testLink").click(function(){
+                console.log("clicked");
+                $("#testField").val("12345");
+                $("#testField").triggerHandler("change");
+            });
+        });
+    </script>
+</head>
+<body>
+
+<input type="text" wicket:id="testField" id="testField">
+<a href="#" id="testLink">Link</a>
+</body>
+</html>
