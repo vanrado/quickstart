@@ -9,6 +9,11 @@
                 $("#testField").val("12345");
                 $("#testField").triggerHandler("change");
             });
+            
+            
+            $("#testField").change(function(){
+                console.log("change");
+            });
         });
     </script>
 </head>
